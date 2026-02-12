@@ -2,14 +2,22 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
+  min-height: 100svh; /* 🔥 clave para móviles */
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #1f1c2c, #928dab);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  padding: 20px; /* evita que quede pegado arriba */
 }
 
 .app {
@@ -17,7 +25,7 @@ body {
   color: white;
   padding: 25px;
   border-radius: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   text-align: center;
 }
@@ -33,9 +41,9 @@ h1 {
 
 .opcion {
   background: #2c2c2c;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 10px;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -51,9 +59,9 @@ h1 {
 button {
   margin-top: 15px;
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #1e90ff;
   color: white;
   font-size: 16px;
