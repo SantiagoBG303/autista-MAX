@@ -1,75 +1,114 @@
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
   width: 100%;
-  min-height: 100svh; /* 🔥 clave para móviles */
+  height: 100%;
   margin: 0;
-  padding: 0;
 }
 
+/* 🔥 FONDO FULL, SIN BLANCOS */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 20px; /* evita que quede pegado arriba */
+  padding: 16px;
 }
 
+/* 🧠 TARJETA PRINCIPAL */
 .app {
-  background: #111;
-  color: white;
-  padding: 25px;
-  border-radius: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  min-height: 75svh;
+
+  background: linear-gradient(180deg, #141414, #1f1f1f);
+  border-radius: 28px;
+  padding: 26px 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* 🧠 TÍTULO */
+h1 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
+/* ❓ PREGUNTA */
 #pregunta {
-  font-size: 18px;
-  margin-bottom: 15px;
+  color: #cfcfcf;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.4;
 }
 
+/* 🔘 OPCIONES */
 .opcion {
-  background: #2c2c2c;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 12px;
+  background: linear-gradient(180deg, #2a2a2a, #1f1f1f);
+  color: #eaeaea;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  font-size: 15px;
+  text-align: center;
+
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s;
 }
 
-.opcion:hover {
-  background: #ff4757;
+/* ✨ EFECTO TOQUE */
+.opcion:active {
+  transform: scale(0.97);
 }
 
+/* 🔥 HOVER / SELECCIÓN */
+.opcion:hover,
 .opcion.seleccionada {
-  background: #ff6b81;
+  background: linear-gradient(180deg, #ff416c, #ff4b2b);
+  box-shadow: 0 10px 25px rgba(255, 75, 43, 0.4);
+  color: #ffffff;
 }
 
+/* 👉 BOTÓN */
 button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 14px;
+  margin-top: 18px;
+  padding: 16px;
   border: none;
-  border-radius: 14px;
-  background: #1e90ff;
+  border-radius: 18px;
+
+  background: linear-gradient(180deg, #1e90ff, #0066ff);
   color: white;
   font-size: 16px;
+  font-weight: bold;
+
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* 🔥 BOTÓN ACTIVO */
+button:active {
+  transform: scale(0.97);
+}
+
+/* 🧾 RESULTADO */
 #resultado {
+  margin-top: 24px;
   font-size: 20px;
-  margin-top: 20px;
-  color: #ff4757;
+  font-weight: bold;
+  text-align: center;
+  color: #ff4b2b;
+  line-height: 1.4;
 }
